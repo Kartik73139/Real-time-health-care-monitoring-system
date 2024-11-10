@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Health Monitoring System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Real-Time Health Monitoring System</h1>
+
+    <!-- Patient Registration Form -->
+    <div id="patient-form">
+        <h2>Register Patient</h2>
+        <form id="register-patient-form">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first_name" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last_name" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label for="contact">Contact Number:</label>
+            <input type="text" id="contact" name="contact" required>
+
+            <button type="submit">Register Patient</button>
+        </form>
+    </div>
+
+    <!-- Health Data Input Form -->
+    <div id="health-data-form">
+        <h2>Health Data Entry</h2>
+        <form id="health-data-form">
+            <label for="patient-id">Patient ID:</label>
+            <input type="number" id="patient-id" name="patient_id" required>
+
+            <label for="heart-rate">Heart Rate:</label>
+            <input type="number" id="heart-rate" name="heart_rate" required>
+
+            <label for="blood-pressure">Blood Pressure:</label>
+            <input type="text" id="blood-pressure" name="blood_pressure" required>
+
+            <label for="temperature">Temperature (°C):</label>
+            <input type="number" step="0.01" id="temperature" name="temperature" required>
+
+            <label for="oxygen-level">Oxygen Level (%):</label>
+            <input type="number" step="0.01" id="oxygen-level" name="oxygen_level" required>
+
+            <button type="submit">Submit Health Data</button>
+        </form>
+    </div>
+
+    <!-- Display Health Data -->
+    <div id="health-data-display">
+        <h2>Latest Health Data</h2>
+        <ul id="health-data-list"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
